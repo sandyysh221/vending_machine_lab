@@ -1,3 +1,4 @@
+import Coins.CoinTypes;
 import Coins.Coins;
 import Grid.Grid;
 import Products.Cola;
@@ -22,9 +23,22 @@ public class VendingMachineTest {
     Sweets sweets1;
     Sweets sweets2;
     Sweets sweets3;
+    Coins one_p;
+    Coins two_p;
+    Coins five_p;
+    Coins ten_p;
+    Coins twenty_p;
+    Coins fifty_p;
 
     @Before
     public void before(){
+        one_p = new Coins(CoinTypes.ONE_P);
+        two_p = new Coins(CoinTypes.TWO_P);
+        five_p = new Coins(CoinTypes.FIVE_P);
+        ten_p = new Coins(CoinTypes.TEN_P);
+        twenty_p = new Coins(CoinTypes.TWENTY_P);
+        fifty_p = new Coins(CoinTypes.FIFTY_P);
+        one_p = new Coins(CoinTypes.ONE_P);
         cola1 = new Cola("Irn Bru", 1.00, Grid.A1);
         cola2 = new Cola("Orange Fanta", 1.00, Grid.A2);
         cola3 = new Cola("Sprite", 1.00, Grid.A3);
@@ -57,10 +71,9 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void enoughCoinsToBuyProduct() {
-        ArrayList<Coins> coins = new ArrayList<Coins>();
-        coins.add(coins);
-        vendingMachine.
+    public void enoughCoinsToBuyProduct(){
+        vendingMachine.pickItem(fifty_p, crisp1);
+        assertEquals()
     }
 
     @Test

@@ -1,3 +1,4 @@
+import Coins.CoinTypes;
 import Coins.Coins;
 import Products.Products;
 
@@ -23,5 +24,12 @@ public class VendingMachine {
 
     public ArrayList getVendingMachineSnacks() {
         return this.vendingMachineSnacks;
+    }
+
+    public void pickItem(Coins coin, Products product) {
+        if (coin.getCoinValue() == product.getPrice()) {
+            return product;
+        }
+        return coinsInMachine;
     }
 }

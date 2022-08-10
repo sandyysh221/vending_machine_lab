@@ -22,4 +22,8 @@ public class Coins {
     public int coinsCount() {
         return this.amountOfCoinsInserted.size();
     }
+
+    public double getCoinValue() {
+        return this.coinTypes.getValue();
+    }
 }
